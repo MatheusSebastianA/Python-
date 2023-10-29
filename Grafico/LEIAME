@@ -1,0 +1,17 @@
+Integrantes: Matheus Sebastian Alencar de Carvalho (GRR20220065) e Tiago Mendes Bottamedi (GRR20220068)
+
+Limitações:
+
+    Por conta das especificações do trabalho, não foi necessário a implementação de um remainder loop, tendo em vista que todas as matrizes tem tamanho divisível por 4, não sendo necessário um loop para o resto dessa divisão.
+
+    O valor do fator de unroll não foi especificado, gerando valores diferentes para o teste de desempenho dependendo do valor colocado. 
+
+    O gráfico foi feito baseado na saída específica da rodagem desse programa, não funcionando caso a quantidade de testes mude de ordem ou de quantidade.
+
+    Aumento do uso de registradores, causado pelo Loop Unroll.
+
+Otimizações: 
+
+    Blocagem de laço (Loop Blocking), que aumenta reutilização da cachem, visando reduzir o problema para tamanhos que caibam na cache.
+
+    Loop Unroll & Jam, diminuindo as vezes que os valores são carregados em cache.
